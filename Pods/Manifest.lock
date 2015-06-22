@@ -23,8 +23,8 @@ PODS:
   - Expecta (1.0.0)
   - Forecastr (0.1.3):
     - AFNetworking (~> 2.4.1)
-  - OHHTTPStubs (4.0.1)
-  - Specta (1.0.0)
+  - OHHTTPStubs (4.0.2)
+  - Specta (1.0.2)
 
 DEPENDENCIES:
   - Expecta
@@ -45,7 +45,7 @@ SPEC CHECKSUMS:
   AFNetworking: 41d45d2c14219af0fa5addf3cfd433a002c13c9f
   Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
   Forecastr: 905195c95916a3b50df136a7b0c4db794c9b9c5f
-  OHHTTPStubs: 69b1d48b7dfe838a355fdf48d8592d1042e3d85f
-  Specta: 96fe05fe5c7348b5223f85e862904f6e832abb14
+  OHHTTPStubs: dbd1957d414659783e07b49c961940b7564c23d9
+  Specta: 9cec98310dca411f7c7ffd6943552b501622abfe
 
-COCOAPODS: 0.37.1
+COCOAPODS: 0.37.2
