@@ -9,20 +9,22 @@
 #import "FISViewController.h"
 #import <Forecastr/Forecastr.h>
 
-@implementation FISViewController {
-    Forecastr *forecastr;
-}
+@interface FISViewController ()
+@property (strong, nonatomic) Forecastr *forecastr;
+@end
 
-static NSString *const FORECASTR_KEY = @"<#getcha own key#>"; //sorry :( 
+@implementation FISViewController
+
+static NSString *const FORECASTR_KEY = @"<#getcha own key#>"; //sorry :(
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    forecastr = [Forecastr sharedManager];
-    forecastr.apiKey = FORECASTR_KEY;
+    self.forecastr = [Forecastr sharedManager];
+    self.forecastr.apiKey = FORECASTR_KEY;
     
-    [forecastr getForecastForLatitude:34.6939 longitude:135.5022 time:nil exclusions:nil extend:nil success:^(id JSON) {
+    [self.forecastr getForecastForLatitude:34.6939 longitude:135.5022 time:nil exclusions:nil extend:nil success:^(id JSON) {
         NSLog(@"%@",JSON);
         
         NSString *rainProbString = JSON[@"currently"][@"precipProbability"];

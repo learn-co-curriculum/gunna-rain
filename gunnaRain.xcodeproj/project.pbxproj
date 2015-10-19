@@ -22,6 +22,7 @@
 		D81D44CE195D8993007B2D60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81D44AD195D8993007B2D60 /* Foundation.framework */; };
 		D81D44CF195D8993007B2D60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81D44B1195D8993007B2D60 /* UIKit.framework */; };
 		D81D44D7195D8993007B2D60 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D81D44D5195D8993007B2D60 /* InfoPlist.strings */; };
+		E25CA5B61BD562FA0066FC43 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25CA5B51BD562FA0066FC43 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		E2CEF1CC1B02AD4600F5F4BC /* FISViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CEF1CA1B02AD4600F5F4BC /* FISViewControllerSpec.m */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		D81D44CC195D8993007B2D60 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D81D44D4195D8993007B2D60 /* gunnaRainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "gunnaRainTests-Info.plist"; sourceTree = "<group>"; };
 		D81D44D6195D8993007B2D60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E25CA5B51BD562FA0066FC43 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E2CEF1CA1B02AD4600F5F4BC /* FISViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISViewControllerSpec.m; sourceTree = "<group>"; };
 		F65F0644EBD3AF7FFFA02F75 /* Pods-gunnaRainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gunnaRainTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-gunnaRainTests/Pods-gunnaRainTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +156,7 @@
 				D81D44B6195D8993007B2D60 /* InfoPlist.strings */,
 				D81D44B9195D8993007B2D60 /* main.m */,
 				D81D44BB195D8993007B2D60 /* gunnaRain-Prefix.pch */,
+				E25CA5B51BD562FA0066FC43 /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				D81D44A7195D8993007B2D60 /* Frameworks */,
 				D81D44A8195D8993007B2D60 /* Resources */,
 				B6ACDB3525804497AB32E8F3 /* Copy Pods Resources */,
+				F3E66E1D27E6D1A3AF002FE3 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,6 +211,7 @@
 				D81D44C8195D8993007B2D60 /* Frameworks */,
 				D81D44C9195D8993007B2D60 /* Resources */,
 				D687852C648D1EF1D5A64894 /* Copy Pods Resources */,
+				8C6361629D6A83723919052A /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,7 +230,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = FIS;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Joe Burgess";
 				TargetAttributes = {
 					D81D44CA195D8993007B2D60 = {
@@ -259,6 +264,7 @@
 			files = (
 				D81D44C6195D8993007B2D60 /* Images.xcassets in Resources */,
 				D81D44B8195D8993007B2D60 /* InfoPlist.strings in Resources */,
+				E25CA5B61BD562FA0066FC43 /* Launch Screen.storyboard in Resources */,
 				D81D44C1195D8993007B2D60 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +280,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8C6361629D6A83723919052A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gunnaRainTests/Pods-gunnaRainTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B513D07C63A39113EB85C9C6 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -332,6 +353,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F3E66E1D27E6D1A3AF002FE3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -411,6 +447,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -425,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -457,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -472,6 +509,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gunnaRain/gunnaRain-Prefix.pch";
 				INFOPLIST_FILE = "gunnaRain/gunnaRain-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "FlatironSchool.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -486,6 +525,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gunnaRain/gunnaRain-Prefix.pch";
 				INFOPLIST_FILE = "gunnaRain/gunnaRain-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "FlatironSchool.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -508,6 +549,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "gunnaRainTests/gunnaRainTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "FlatironSchool.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -527,6 +569,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gunnaRain/gunnaRain-Prefix.pch";
 				INFOPLIST_FILE = "gunnaRainTests/gunnaRainTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "FlatironSchool.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
