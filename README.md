@@ -26,3 +26,5 @@ Why look outside when you can just look at your phone!
   * As you can see, this requires a lat/lng. Sure, you could enter this manually, but that's not as fun! This is a great opportunity to try out getting your current location in iOS 8. <a href="http://stackoverflow.com/questions/26134641/how-to-get-current-location-lat-long-in-ios-8">Here's a great StackOverflow on finding a user's current location</a>.
    **DO NOT SKIP OVER THE STUFF ABOUT adding strings to your info.plist file! You need to implement this for it to work!**
 
+
+<a href='https://learn.co/lessons/gunna-rain' data-visibility='hidden'>View this lesson on Learn.co</a>
