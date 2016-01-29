@@ -27,4 +27,4 @@ Why look outside when you can just look at your phone!
    **DO NOT SKIP OVER THE STUFF ABOUT adding strings to your info.plist file! You need to implement this for it to work!**
 
 
-<a href='https://learn.co/lessons/gunna-rain' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/gunna-rain' title='Is it raining?'>Is it raining?</a> on Learn.co and start learning to code for free.</p>
